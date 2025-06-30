@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/embeddeb_guide/static/css/main.42fd2fb2.css",
+    "main.js": "/embeddeb_guide/static/js/main.29264d23.js",
+    "index.html": "/embeddeb_guide/index.html",
+    "main.42fd2fb2.css.map": "/embeddeb_guide/static/css/main.42fd2fb2.css.map",
+    "main.29264d23.js.map": "/embeddeb_guide/static/js/main.29264d23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42fd2fb2.css",
+    "static/js/main.29264d23.js"
+  ]
+}
