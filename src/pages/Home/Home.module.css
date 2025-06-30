@@ -1,16 +1,183 @@
 .homePage {
-  /* סגנונות ספציפיים לעמוד הבית אם יש צורך */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  direction: rtl;
+}
+
+.heroSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-l);
+  margin-top: var(--spacing-xl);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-l);
+  margin-bottom: var(--spacing-xl);
 }
 
 .ctaText {
   font-size: var(--font-size-large);
-  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-xl);
   text-align: center;
-  margin-top: var(--spacing-xxl);
-  color: var(--color-primary-dark);
-  background-color: var(--color-secondary-light);
-  padding: var(--padding-medium);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: var(--spacing-l);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-l);
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-l) var(--spacing-xl);
   border-radius: var(--border-radius-large);
-  box-shadow: var(--shadow-medium);
-  border: 1px solid var(--color-secondary);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(63, 81, 181, 0.3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  min-width: 180px;
+  justify-content: center;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(63, 81, 181, 0.4);
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+}
+
+.primaryButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(63, 81, 181, 0.3);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  padding: calc(var(--spacing-l) - 2px) calc(var(--spacing-xl) - 2px);
+  border-radius: var(--border-radius-large);
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  min-width: 180px;
+  justify-content: center;
+}
+
+.secondaryButton:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 188, 212, 0.3);
+}
+
+.secondaryButton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.2);
+}
+
+/* אנימציות כללות */
+.homePage > * {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.homePage > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.homePage > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.homePage > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.homePage > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.homePage > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* עיצוב עבור טאבלט */
+@media (max-width: 768px) {
+  .homePage {
+    padding: var(--spacing-l);
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-m);
+  }
+  
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-m);
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-m);
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+    padding: var(--spacing-m) var(--spacing-l);
+    font-size: var(--font-size-medium);
+  }
+}
+
+/* עיצוב עבור מובייל */
+@media (max-width: 480px) {
+  .homePage {
+    padding: var(--spacing-m);
+  }
+  
+  .ctaText {
+    font-size: var(--font-size-medium);
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    font-size: var(--font-size-small);
+    padding: var(--spacing-s) var(--spacing-m);
+    min-width: auto;
+  }
 } 

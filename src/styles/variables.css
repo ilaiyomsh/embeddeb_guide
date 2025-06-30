@@ -3,14 +3,27 @@
   --color-primary: #3f51b5; /* כחול אינדיגו */
   --color-primary-light: #7986cb;
   --color-primary-dark: #303f9f;
-  --color-secondary: #ffc107; /* ענבר */
-  --color-secondary-light: #ffd740;
+  --color-secondary: #f50057;
+  --color-secondary-dark: #c51162;
+  --color-secondary-light: #ff5983;
   --color-accent: #00bcd4; /* ציאן */
-  --color-background-light: #f5f7fa; /* רקע עדין */
+  --color-accent-dark: #0097a7;
+  --color-accent-light: #4dd0e1;
+  --color-background-light: #fafafa;
+  --color-background-medium: #f5f5f5;
+  --color-background-dark: #eeeeee;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-text-dark: #333333;
-  --color-text-light: #555555;
+  --color-text-dark: #212121;
+  --color-text-medium: #757575;
+  --color-text-light: #bdbdbd;
+  --color-border-light: #e0e0e0;
+  --color-border-medium: #bdbdbd;
+  --color-border-dark: #9e9e9e;
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+  --color-info: #2196f3;
   --color-border: #e0e0e0;
   --color-shadow: rgba(0, 0, 0, 0.15);
 
@@ -24,44 +37,74 @@
   --color-placeholder-text: #666666;
 
   /* גופנים */
-  --font-primary: 'Inter', sans-serif;
-  --font-code: 'Fira Code', monospace;
+  --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-code: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
 
   /* גדלי פונטים בסיסיים */
-  --font-size-base: 16px;
-  --font-size-small: 0.875rem;
-  --font-size-medium: 1rem;
-  --font-size-large: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-xxl: 2rem;
+  --font-size-tiny: 0.75rem;    /* 12px */
+  --font-size-small: 0.875rem;  /* 14px */
+  --font-size-medium: 1rem;     /* 16px */
+  --font-size-large: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-xxl: 1.5rem;      /* 24px */
+  --font-size-xxxl: 2rem;       /* 32px */
 
-  /* רדיוס פינות */
-  --border-radius-small: 4px;
-  --border-radius-medium: 8px;
-  --border-radius-large: 16px;
-  --border-radius-circle: 50%;
+  /* משקלי גופן */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   /* מרווחים (בהתבסס על מכפלות של 0.5rem) */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-s: 0.5rem;  /* 8px */
-  --spacing-m: 1rem;   /* 16px */
-  --spacing-l: 1.5rem;  /* 24px */
-  --spacing-xl: 2rem;   /* 32px */
-  --spacing-xxl: 3rem;  /* 48px */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-s: 0.5rem;     /* 8px */
+  --spacing-m: 0.75rem;    /* 12px */
+  --spacing-l: 1rem;       /* 16px */
+  --spacing-xl: 1.5rem;    /* 24px */
+  --spacing-xxl: 2rem;     /* 32px */
+  --spacing-xxxl: 3rem;    /* 48px */
 
   /* ריפוד (Padding) */
-  --padding-small: 0.5rem;
-  --padding-medium: 1rem;
-  --padding-large: 1.5rem;
+  --padding-small: 0.5rem 0.75rem;    /* 8px 12px */
+  --padding-medium: 0.75rem 1rem;     /* 12px 16px */
+  --padding-large: 1rem 1.5rem;       /* 16px 24px */
 
   /* מעברים (Transitions) */
   --transition-speed-fast: 0.15s;
   --transition-speed-normal: 0.3s;
   --transition-speed-slow: 0.5s;
-  --transition-ease: ease-in-out;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-ease-out: cubic-bezier(0, 0, 0.2, 1);
 
   /* צלליות (Box Shadows) */
-  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.12);
-  --shadow-large: 0 8px 16px rgba(0, 0, 0, 0.18);
+  --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.18);
+
+  /* מתקדם - גרדיאנטים */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  --gradient-success: linear-gradient(135deg, var(--color-success), #388e3c);
+  --gradient-warning: linear-gradient(135deg, var(--color-warning), #f57c00);
+
+  /* מתקדם - ברקים */
+  --backdrop-blur: blur(10px);
+  --backdrop-brightness: brightness(1.1);
+
+  /* מתקדם - זמני אנימציה */
+  --animation-duration-short: 0.2s;
+  --animation-duration-medium: 0.4s;
+  --animation-duration-long: 0.6s;
+
+  /* מתקדם - עבור רכיבים ספציפיים */
+  --navbar-height: 64px;
+  --sidebar-width: 280px;
+  --content-max-width: 1200px;
+
+  /* משתני מובייל */
+  --mobile-padding: 1rem;
+  --mobile-font-scale: 0.9;
 } 

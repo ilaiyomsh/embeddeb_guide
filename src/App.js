@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 import Home from './pages/Home/Home';
 import Setup from './pages/Setup/Setup';
 import Deployment from './pages/Deployment/Deployment';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className={styles.appContainer}>
       <Navbar />
+      <ProgressBar />
       <main className={styles.mainContent}>
         <Routes>
           <Route path="/" element={<Home />} />
