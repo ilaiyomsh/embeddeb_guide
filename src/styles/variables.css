@@ -1,0 +1,67 @@
+:root {
+  /* צבעים */
+  --color-primary: #3f51b5; /* כחול אינדיגו */
+  --color-primary-light: #7986cb;
+  --color-primary-dark: #303f9f;
+  --color-secondary: #ffc107; /* ענבר */
+  --color-secondary-light: #ffd740;
+  --color-accent: #00bcd4; /* ציאן */
+  --color-background-light: #f5f7fa; /* רקע עדין */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-text-dark: #333333;
+  --color-text-light: #555555;
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0, 0, 0, 0.15);
+
+  /* צבעים ספציפיים לקוד */
+  --color-code-background: #282c34;
+  --color-code-text: #abb2bf;
+
+  /* צבעים עבור תמונות מציינות מיקום */
+  --color-placeholder-background: #e0e0e0;
+  --color-placeholder-border: #999999;
+  --color-placeholder-text: #666666;
+
+  /* גופנים */
+  --font-primary: 'Inter', sans-serif;
+  --font-code: 'Fira Code', monospace;
+
+  /* גדלי פונטים בסיסיים */
+  --font-size-base: 16px;
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+
+  /* רדיוס פינות */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+  --border-radius-circle: 50%;
+
+  /* מרווחים (בהתבסס על מכפלות של 0.5rem) */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-s: 0.5rem;  /* 8px */
+  --spacing-m: 1rem;   /* 16px */
+  --spacing-l: 1.5rem;  /* 24px */
+  --spacing-xl: 2rem;   /* 32px */
+  --spacing-xxl: 3rem;  /* 48px */
+
+  /* ריפוד (Padding) */
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --padding-large: 1.5rem;
+
+  /* מעברים (Transitions) */
+  --transition-speed-fast: 0.15s;
+  --transition-speed-normal: 0.3s;
+  --transition-speed-slow: 0.5s;
+  --transition-ease: ease-in-out;
+
+  /* צלליות (Box Shadows) */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 8px 16px rgba(0, 0, 0, 0.18);
+} 

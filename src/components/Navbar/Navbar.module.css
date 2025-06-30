@@ -1,0 +1,67 @@
+.navbar {
+  background-color: var(--color-primary); /* שימוש במשתני CSS */
+  padding: var(--padding-medium) var(--padding-large);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: var(--border-radius-large); /* פינות מעוגלות */
+  border-bottom-right-radius: var(--border-radius-large);
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ודא שסרגל הניווט תמיד למעלה */
+}
+
+.logo a {
+  color: var(--color-white);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color var(--transition-speed-normal) var(--transition-ease);
+}
+
+.logo a:hover {
+  color: var(--color-secondary);
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--spacing-l); /* שימוש במרווחים ממשתנים */
+}
+
+.navList li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--padding-small) var(--padding-medium);
+  border-radius: var(--border-radius-medium);
+  transition: background-color var(--transition-speed-normal) var(--transition-ease), color var(--transition-speed-normal) var(--transition-ease);
+}
+
+.navList li a:hover,
+.navList li a.activeLink { /* שימוש במחלקה activeLink עבור הקישור הפעיל */
+  background-color: var(--color-secondary);
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: var(--padding-medium);
+  }
+
+  .navList {
+    margin-top: var(--spacing-m);
+    flex-wrap: wrap; /* מאפשר לקישורים לעבור שורה במובייל */
+    justify-content: center;
+    gap: var(--spacing-s); /* מרווח קטן יותר במובייל */
+  }
+
+  .navList li a {
+    font-size: var(--font-size-small);
+    padding: var(--spacing-xs) var(--spacing-s);
+  }
+} 

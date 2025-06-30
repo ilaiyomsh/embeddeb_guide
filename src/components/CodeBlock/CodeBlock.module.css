@@ -1,0 +1,37 @@
+.codeBlock {
+  background-color: var(--color-code-background);
+  color: var(--color-code-text);
+  padding: var(--padding-medium);
+  border-radius: var(--border-radius-medium);
+  overflow-x: auto; /* גלילה אופקית אם הקוד ארוך */
+  font-family: var(--font-code); /* פונט לקוד */
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+  margin: var(--spacing-xl) 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* צל פנימי עדין */
+  border-left: 5px solid var(--color-accent); /* פס בצד שמאל */
+  direction: ltr; /* יישור לשמאל עבור קוד */
+  text-align: left;
+}
+
+.code {
+  display: block; /* ודא שהקוד תמיד בתוך בלוק */
+  white-space: pre-wrap; /* שבירת שורות ארוכות */
+  word-break: break-all; /* שבירת מילים ארוכות */
+}
+
+/* סגנונות ספציפיים לשפות (ניתן להרחיב עם ספריית הדגשה כמו Prism.js) */
+.language-bash,
+.language-json,
+.language-javascript,
+.language-css,
+.language-jsx {
+  /* ניתן להוסיף כאן סגנונות הדגשה ספציפיים */
+}
+
+@media (max-width: 768px) {
+  .codeBlock {
+    padding: var(--padding-small);
+    font-size: 0.8rem;
+  }
+} 

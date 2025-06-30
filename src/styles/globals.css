@@ -1,0 +1,68 @@
+/* ייבוא גופן Google Fonts: Inter ו-Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+/* איפוס CSS בסיסי */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+  direction: rtl; /* יישור לימין כללי */
+  text-align: right;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-speed-normal) var(--transition-ease);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-m);
+  font-family: var(--font-primary);
+  color: var(--color-primary-dark);
+}
+
+p {
+  margin-bottom: var(--spacing-m);
+}
+
+ul, ol {
+  margin-bottom: var(--spacing-m);
+  padding-right: var(--spacing-xl); /* עבור רשימות מימין לשמאל */
+}
+
+/* עיצוב כללי של כפתורים */
+button {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  padding: var(--padding-medium) var(--spacing-l);
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  transition: background-color var(--transition-speed-normal) var(--transition-ease), transform var(--transition-speed-fast) var(--transition-ease);
+  box-shadow: var(--shadow-light);
+}
+
+button:hover {
+  background-color: #0097a7; /* גוון כהה יותר של accent */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-light);
+} 

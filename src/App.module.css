@@ -1,0 +1,22 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-background-light); /* שימוש במשתני CSS */
+  color: var(--color-text-dark);
+  font-family: var(--font-primary);
+}
+
+.mainContent {
+  flex-grow: 1; /* מאפשר לתוכן הראשי לתפוס את השטח הזמין */
+  padding: var(--padding-large); /* שימוש במשתני CSS למרווחים */
+  max-width: 1200px;
+  margin: 0 auto; /* מרכוז תוכן */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: var(--padding-medium); /* התאמת ריפוד למובייל */
+  }
+} 

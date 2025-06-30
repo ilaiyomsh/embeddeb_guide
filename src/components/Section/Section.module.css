@@ -1,0 +1,96 @@
+.section {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-large);
+  padding: var(--padding-large);
+  margin-bottom: var(--spacing-xxl);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08); /* צל מורכב יותר */
+  border-top: 5px solid var(--color-primary-light); /* פס עליון דקורטיבי */
+  transition: transform var(--transition-speed-normal) var(--transition-ease), box-shadow var(--transition-speed-normal) var(--transition-ease);
+}
+
+.section:hover {
+  transform: translateY(-5px); /* אפקט ריחוף קל */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.sectionTitle {
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--color-secondary-light);
+  padding-bottom: var(--spacing-m);
+  position: relative;
+  text-align: right; /* יישור לימין */
+  padding-right: 20px; /* רווח פנימי מימין */
+}
+
+.sectionTitle::before { /* אלמנט עיצובי לפני הכותרת */
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-circle);
+  transform: translateX(10px);
+}
+
+.sectionContent p {
+  line-height: 1.8;
+  margin-bottom: var(--spacing-m);
+  text-align: right;
+  direction: rtl;
+}
+
+.sectionContent ul {
+  list-style-type: disc;
+  margin-right: var(--spacing-xl);
+  margin-bottom: var(--spacing-m);
+  text-align: right;
+  direction: rtl;
+}
+
+.sectionContent ul li {
+  margin-bottom: var(--spacing-s);
+}
+
+/* סגנונות מותאמים אישית עבור רכיבים בתוך סעיף */
+.sectionContent h3 {
+  color: var(--color-accent);
+  font-size: var(--font-size-xl);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-m);
+  text-align: right;
+  direction: rtl;
+}
+
+.sectionContent ol {
+  list-style-type: decimal;
+  margin-right: var(--spacing-xl);
+  margin-bottom: var(--spacing-m);
+  text-align: right;
+  direction: rtl;
+}
+
+.sectionContent ol li {
+  margin-bottom: var(--spacing-s);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--padding-medium);
+    margin-bottom: var(--spacing-l);
+  }
+
+  .sectionTitle {
+    font-size: var(--font-size-xl);
+    padding-bottom: var(--spacing-s);
+  }
+
+  .sectionContent p,
+  .sectionContent ul,
+  .sectionContent ol {
+    font-size: var(--font-size-medium);
+  }
+} 
